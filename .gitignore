@@ -1,0 +1,9 @@
+# idea
+.idea
+.DS_Store
+
+# node_modules
+node_modules
+
+# 打包文件
+dist

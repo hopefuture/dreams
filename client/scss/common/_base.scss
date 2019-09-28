@@ -1,0 +1,53 @@
+// 这里之所以定义 html 为 position: relative; 主要为了实现，不论页面高度如何，底部始终在最下面显示
+
+html {
+  position: relative;
+}
+
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  background-color: #090e27;
+  color: #fff;
+}
+
+a {
+  color: rgba(#fff, .5);
+  transition: color 600ms cubic-bezier(.45, 0, .27, 1);
+
+  &:hover {
+    color: rgba(#fff, .8);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: rgba(#fff, .5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.gray {
+  color: rgba(#fff, .3);
+  font-size: 12px;
+}
+
+.m-t-100 {
+  margin-top: 6rem !important;
+}
+
+.m-t-40 {
+  margin-top: 2.5rem;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

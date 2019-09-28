@@ -1,0 +1,191 @@
+.home-bg {
+  background: url("../../images/bg.png") no-repeat #090e27;
+  background-size: contain;
+  color: #fff;
+}
+
+@media (min-width: 1920px) {
+  .home-bg {
+    background-size: auto;
+  }
+}
+
+.jumbotron {
+  margin: 2rem 0;
+  text-align: center;
+  background-color: transparent;
+
+  h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    font-weight: 100;
+  }
+
+  h4 {
+    font-size: 26px;
+    margin-top: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.explore {
+  margin: 12rem 0 6rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron {
+    margin-top: 9rem;
+  }
+
+  .explore {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron {
+    margin-top: 11rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .jumbotron {
+    margin-top: 12rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .jumbotron {
+    margin-top: 22rem;
+  }
+}
+
+.home-content {
+  text-align: center;
+
+  &-paragraph {
+    margin-top: 2rem;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &-list {
+    margin-top: 4rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    &-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: url("../../images/home/round.png") no-repeat;
+    }
+
+    &-title {
+      margin-top: 1.75rem;
+      font-size: 18px;
+    }
+
+    &-intro {
+      letter-spacing: 1px;
+      margin: .75rem 10rem;
+    }
+  }
+}
+
+.home-album {
+  position: relative;
+  margin-top: 10rem;
+  margin-bottom: -66px;
+  text-align: center;
+
+  &-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1px;
+    background-color: #1a3150;
+
+    &::before, &::after {
+      content: "";
+      background: url("../../images/home/line-dot.png");
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  &-item {
+    position: relative;
+    top: -66px;
+  }
+
+  &-title {
+    margin-top: 1.5rem;
+    font-size: 20px;
+  }
+
+  &-subtitle {
+    margin-bottom: .75rem;
+    font-size: 14px;
+    color: rgba(#fff, .3);
+  }
+
+  &-intro {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .75rem;
+    font-size: 12px;
+    color: rgba(#fff, .3);
+  }
+}
+
+.home-exhibition {
+  margin-top: 5rem;
+
+  &-item-left {
+    padding-right: 1rem;
+  }
+}
+
+.home-address {
+  &-title {
+    font-size: 18px;
+  }
+
+  &-intro {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: rgba(#fff, .3);
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.home-qrcode {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: rgba(#fff, .3);
+  font-size: 14px;
+}
