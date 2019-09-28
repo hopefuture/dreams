@@ -193,12 +193,13 @@ const webpackConfig = {
         ]
       },
       {
-        test: /\.(bmp|gif|jpe?g|png|svg)$/,
+        test: /\.(bmp|gif|jpe?g|png)$/,
         use: {
           loader: 'url-loader',
           options: {
             name: '[name].[ext]',
-            limit: 4096 // 4kb
+            limit: 4096, // 4kb
+            outputPath: 'images'
           }
         }
       }
