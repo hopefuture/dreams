@@ -1,5 +1,5 @@
 import { addClass, removeClass } from '../utils/dom-class';
-import { doc } from '../utils/perfect';
+import { doc, win } from '../utils/perfect';
 
 let num = 0;
 const speed = 100;
@@ -14,6 +14,16 @@ function animationRun () {
       setTimeout(animationRun, speed);
     }
   }
+}
+
+let lastMenu;
+function setMenuAction () {
+  if (lastMenu) {
+    removeClass(lastMenu, 'active');
+  }
+  const hash = location.hash;
+  lastMenu = doc.querySelector(`#headerNav li[data-hash="${hash.substring(1)}"]`);
+  addClass(lastMenu, 'active');
 }
 
 export default function () {
@@ -47,4 +57,8 @@ export default function () {
       }
     }
   }, false);
+  
+  win.addEventListener('hashchange', setMenuAction, false);
+  
+  setMenuAction();
 };
