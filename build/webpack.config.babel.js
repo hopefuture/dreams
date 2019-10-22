@@ -56,6 +56,7 @@ const webpackConfig = {
    */
   entry: {
     home: ['./client/scripts/home/index.js'],
+    demo: ['./client/scripts/demo/index.js'],
     'news-detail1': ['./client/scripts/news-detail/index1.js'],
     'news-detail2': ['./client/scripts/news-detail/index2.js']
   },
@@ -108,6 +109,18 @@ const webpackConfig = {
                 {
                   modules: false, // 设为 false，交由 Webpack 来处理模块化
                   debug: isDev
+                }
+              ]
+            ],
+            plugins: [
+              [
+                '@babel/plugin-transform-runtime',
+                {
+                  corejs: false,
+                  helpers: false,
+                  regenerator: true,
+                  useESModules: false,
+                  absoluteRuntime: false
                 }
               ]
             ]
@@ -193,7 +206,7 @@ const webpackConfig = {
         ]
       },
       {
-        test: /\.(bmp|gif|jpe?g|png)$/,
+        test: /\.(bmp|gif|jpe?g|png|glb)$/,
         use: {
           loader: 'url-loader',
           options: {
@@ -263,6 +276,7 @@ const { entry } = webpackConfig;
 // html
 const htmlMap = {
   home: 'client/pages/home.html',
+  demo: 'client/pages/demo.html',
   'news-detail1': 'client/pages/news-detail1.html',
   'news-detail2': 'client/pages/news-detail2.html'
 };

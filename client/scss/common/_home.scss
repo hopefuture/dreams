@@ -1,7 +1,11 @@
 .home-bg {
-  background: url("../../images/bg.png") no-repeat #090e27;
+  background: #090e27;
   background-size: contain;
   color: #fff;
+}
+
+.home-container {
+  position: relative;
 }
 
 @media (min-width: 1920px) {
