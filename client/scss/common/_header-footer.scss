@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: transform 600ms cubic-bezier(.65, .06, .19, .96), opacity 800ms ease-in-out, background 800ms ease-in-out;
@@ -166,7 +166,7 @@
 // 页面底部样式
 .footer-assist {
   // 此处的数值等于 footer 的高度 + 预留的间距
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .footer {
@@ -176,8 +176,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 2rem 0;
-  background: #040713;
+  padding: 1rem 0;
+  background: transparent;
   font-size: 12px;
   color: rgba(#fff, .2);
   text-align: center;

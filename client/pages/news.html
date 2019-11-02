@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+    <title>创梦乐谷-新闻中心</title>
+
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+  </head>
+  <body class="news-bg">
+    <header class="header container sticky-top">
+      <a href="./home.html" class="header-logo">
+        <img src="../images/logo.png" class="img-fluid" alt="创梦乐谷">
+      </a>
+      <ul class="header-nav">
+        <li class="header-nav-item sm">
+          <a href="./home.html">首页</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./about.html">关于我们</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./overview.html">产品概览</a>
+        </li>
+        <li class="header-nav-item active">
+          <a href="./news.html">新闻中心</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./contact.html">联系我们</a>
+        </li>
+      </ul>
+      <div class="header-menu">Menu</div>
+      <div class="header-menu-nav">
+        <div class="header-menu-close">关闭</div>
+        <ul class="header-menu-list">
+          <li class="active"><a href="./about.html">关于我们</a></li>
+          <li><a href="./overview.html">项目概览</a></li>
+          <li><a href="./news.html">新闻中心</a></li>
+          <li><a href="./contact.html">联系我们</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="dreams-jumbotron">
+      <div class="dreams-jumbotron-text1">新闻中心</div>
+      <div class="divider mt-3"></div>
+      <div class="dreams-jumbotron-text2 mt-3">NEWS</div>
+    </div>
+
+    <div class="dreams-container">
+      <div class="container">
+        <div class="news-list" id="newsList"></div>
+        <div class="paging" id="paging"></div>
+      </div>
+    </div>
+    <div class="go-top"></div>
+    <footer class="footer-assist">
+      <div class="footer">
+        <span class="attention">扫码关注</span>
+        <span class="qrcode"></span>
+        京ICP备 637293236 © 深圳市创梦乐谷科技有限公司
+
+        <div class="qrcode-img">
+          <img class="img-fluid" src="../images/qrcode.png" alt="">
+        </div>
+      </div>
+    </footer>
+
+    <!-- 模板中的字段替换成后台字段 -->
+    <script type="text/template" id="newsListTmpl">
+      <div class="row news-item">
+        <div class="col-md-6">
+          <img class="img-fluid" src="{{img}}" alt="">
+        </div>
+        <div class="col-md-6 news-content">
+          <a href="{{href}}" target="_blank">
+            <div class="">
+              {% if top %}
+              <div class="news-content-top">置顶</div>
+              {% endif %}
+              <h3 class="news-content-title">{{title}}</h3>
+              <div class="news-content-subtitle">{{date}}</div>
+              <div class="news-content-intro">
+                {{intro}}
+              </div>
+              <div class="news-content-more">了解更多</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </script>
+
+    <script src="../scripts/news/nunjucks.min.js"></script>
+    <script src="../scripts/components/load-more.js"></script>
+    <script src="../scripts/news/load-more.js"></script>
+  </body>
+</html>

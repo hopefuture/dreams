@@ -1,0 +1,46 @@
+.dreams-jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+
+  &-text1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  &-text2 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dreams-jumbotron {
+    height: 155px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dreams-jumbotron {
+    height: 225px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dreams-jumbotron {
+    height: 290px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dreams-jumbotron {
+    height: 350px;
+  }
+}
+
+.dreams-container {
+  width: 100%;
+  padding: 3rem 0 6rem;
+  background-color: #090e27;
+}

@@ -56,7 +56,10 @@ const webpackConfig = {
    */
   entry: {
     home: ['./client/scripts/home/index.js'],
-    demo: ['./client/scripts/demo/index.js'],
+    about: ['./client/scripts/about/index.js'],
+    overview: ['./client/scripts/overview/index.js'],
+    news: ['./client/scripts/news/index.js'],
+    contact: ['./client/scripts/contact/index.js'],
     'news-detail1': ['./client/scripts/news-detail/index1.js'],
     'news-detail2': ['./client/scripts/news-detail/index2.js']
   },
@@ -206,12 +209,12 @@ const webpackConfig = {
         ]
       },
       {
-        test: /\.(bmp|gif|jpe?g|png|glb)$/,
+        test: /\.(bmp|gif|jpe?g|png|svg|glb)$/,
         use: {
           loader: 'url-loader',
           options: {
-            name: '[name].[ext]',
-            limit: 4096, // 4kb
+            name: '[name].[hash:8].[ext]',
+            limit: 10240, // 10kb
             outputPath: 'images'
           }
         }
@@ -276,7 +279,10 @@ const { entry } = webpackConfig;
 // html
 const htmlMap = {
   home: 'client/pages/home.html',
-  demo: 'client/pages/demo.html',
+  about: 'client/pages/about.html',
+  overview: 'client/pages/overview.html',
+  news: 'client/pages/news.html',
+  contact: 'client/pages/contact.html',
   'news-detail1': 'client/pages/news-detail1.html',
   'news-detail2': 'client/pages/news-detail2.html'
 };

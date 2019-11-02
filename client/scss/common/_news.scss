@@ -1,60 +1,100 @@
 .news {
-  // 新闻详情
-  &-detail {
-    max-width: 1000px;
-    padding: 0 20px;
-    margin-top: 2rem;
+  &-bg {
+    background-image: url("../../images/news/top-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  &-title {
-    width: 820px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 1.5;
-
-    &.sm {
-      width: 720px;
-    }
+  &-list {
+    margin-top: 1rem;
   }
 
-  &-subtitle {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 12px;
-    color: rgba(#fff, .5);
+  &-item {
+    margin-top: 3rem;
   }
 
   &-content {
-    margin-top: 2rem;
-    padding: 3rem 0;
-    border-top: 1px solid #221d41;
-    border-bottom: 1px solid #221d41;
-    font-size: 12px;
-    color: rgba(#fff, .5);
-  }
+    position: relative;
+    padding-left: 2rem;
 
-  &-paragraph {
-    margin-bottom: 1.5rem;
-    text-indent: 2em;
-    line-height: 2;
-
-    &:last-of-type {
-      margin-bottom: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 2rem);
+      border-bottom: 1px solid #0e1933;
     }
-  }
 
-  &-img {
-    text-align: center;
-    margin-top: 3rem;
+    &-top {
+      display: inline-block;
+      padding: 2px 8px;
+      color: #fff;
+      background: #f7b230;
+      border-radius: 2px;
+      font-size: 12px;
+
+      + .news-list-title {
+        margin-top: 1.25rem;
+      }
+    }
+
+    &-title {
+      margin-top: 2.5rem;
+      font-size: 18px;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      letter-spacing: 1px;
+    }
+
+    &-subtitle {
+      margin-top: 1rem;
+      color: rgba(#fff, .5);
+      font-size: 12px;
+      transition: color 600ms cubic-bezier(.45, 0, .27, 1);
+    }
 
     &-intro {
-      margin-top: 1.5rem;
-      font-size: 14px;
-      color: #fff;
+      margin-top: 1rem;
+      color: rgba(#fff, .5);
+      font-size: 12px;
+      line-height: 2;
+      transition: color 600ms cubic-bezier(.45, 0, .27, 1);
+    }
+
+    &-more {
+      display: flex;
+      align-content: center;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      font-size: 12px;
+      color: rgba(#fff, .5);
+      cursor: pointer;
+      transition: color 600ms cubic-bezier(.45, 0, .27, 1);
+
+      &::after {
+        content: "";
+        width: 15px;
+        height: 11px;
+        margin-top: 3px;
+        margin-left: 5px;
+        background: url("../../images/arrow-right.png");
+      }
+    }
+
+    &:hover {
+      .news-list-subtitle, .news-list-intro {
+        color: rgba(#fff, .8);
+      }
+
+      .news-list-more {
+        color: #fff;
+
+        &::after {
+          background: url("../../images/arrow-right-active.png");
+        }
+      }
     }
   }
 
@@ -62,13 +102,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(#fff, .5);
 
     &-prev {
       display: flex;
       padding: .5rem 0;
       cursor: pointer;
+      color: rgba(#fff, .5);
 
       &::before {
         content: "";
@@ -79,15 +120,27 @@
         background: url("../../images/arrow-left.png");
       }
 
-      &:hover::before {
-        background: url("../../images/arrow-left-active.png");
+      &:hover {
+        color: #fff;
+
+        &::before {
+          background: url("../../images/arrow-left-active.png");
+        }
       }
+    }
+
+    &-text {
+      width: 350px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &-next {
       padding: .5rem 0;
       display: flex;
       cursor: pointer;
+      color: rgba(#fff, .5);
 
       &::after {
         content: "";
@@ -98,16 +151,17 @@
         background: url("../../images/arrow-right.png");
       }
 
-      &:hover::after {
-        background: url("../../images/arrow-right-active.png");
-      }
-    }
+      &:hover {
+        color: #fff;
 
-    &-text {
-      width: 350px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+        &::after {
+          background: url("../../images/arrow-right-active.png");
+        }
+      }
+
+      .news-paging-text {
+        text-align: right;
+      }
     }
   }
 }

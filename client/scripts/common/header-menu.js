@@ -16,20 +16,6 @@ function animationRun () {
   }
 }
 
-let lastMenu;
-const hashs = ['top', 'about', 'news', 'contact'];
-function setMenuAction () {
-  if (lastMenu) {
-    removeClass(lastMenu, 'active');
-  }
-  let hash = location.hash.substring(1);
-  if (hashs.indexOf(hash) === -1) {
-    hash = 'top';
-  }
-  lastMenu = doc.querySelector(`#headerNav li[data-hash="${hash}"]`);
-  addClass(lastMenu, 'active');
-}
-
 export default function () {
   const headerMenu = doc.querySelector('.header .header-menu');
   const headerMenuNav = doc.querySelector('.header .header-menu-nav');
@@ -61,8 +47,4 @@ export default function () {
       }
     }
   }, false);
-  
-  win.addEventListener('hashchange', setMenuAction, false);
-  
-  setMenuAction();
 };

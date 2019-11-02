@@ -1,0 +1,38 @@
+.contact {
+  &-bg {
+    background-image: url("../../images/contact/top-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-container {
+    padding: 6rem 0 8rem;
+  }
+
+  &-qrcode {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: rgba(#fff, .3);
+    font-size: 14px;
+  }
+}
+
+.address-panel {
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+
+  &-title {
+    font-size: 18px;
+  }
+
+  &-intro {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: rgba(#fff, .3);
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+}
