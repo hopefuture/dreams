@@ -1,3 +1,12 @@
+.qrcode {
+  display: inline-block;
+  margin: 0 .75rem;
+  width: 30px;
+  height: 30px;
+  background: url("../../images/share-weixin.png");
+  cursor: pointer;
+}
+
 .qrcode-img {
   position: absolute;
   z-index: 1;
