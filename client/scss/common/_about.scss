@@ -5,3 +5,12 @@
     background-size: contain;
   }
 }
+
+// 移动端
+@media (max-width: 767.98px) {
+  .about {
+    &-bg {
+      background-image: url("../../images/about/top-bg-m.jpg");
+    }
+  }
+}

@@ -12,7 +12,7 @@
   &-qrcode {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     color: rgba(#fff, .3);
     font-size: 14px;
   }
@@ -31,8 +31,64 @@
     font-size: 14px;
     color: rgba(#fff, .3);
 
-    p {
-      margin-bottom: .5rem;
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    dt {
+      float: left;
+      width: 45px;
+      font-weight: normal;
+
+      &::after {
+        content: "：";
+      }
+    }
+
+    dd {
+      margin-left: 45px;
+    }
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .contact {
+    &-bg {
+      background-image: url("../../images/contact/top-bg-m.jpg");
+    }
+
+    &-container {
+      padding: 2rem 0 4rem;
+    }
+
+    &-qrcode {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+  }
+
+  .address-panel {
+    margin-top: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+
+    &-intro {
+      dt {
+        float: none;
+        width: auto;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      dd {
+        margin-left: 0;
+        margin-top: .5rem;
+      }
     }
   }
 }

@@ -15,6 +15,15 @@
   &-logo {
     position: relative;
     z-index: 3000;
+
+    &-icon {
+      display: inline-block;
+      width: 99px;
+      height: 53px;
+      background-image: url("../../images/logo.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
 
   &-nav {
@@ -75,13 +84,24 @@
     position: relative;
     display: none;
     padding: .5rem;
+    background-image: url("../../images/menu.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 24px;
+    height: 16px;
+    text-indent: -10000px;
     cursor: pointer;
 
     &-close {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 1rem;
+      top: 2.6rem;
+      right: 2.7rem;
+      background-image: url("../../images/close.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 17px;
+      height: 16px;
+      text-indent: -10000px;
       cursor: pointer;
     }
 
@@ -93,7 +113,7 @@
       left: 0;
       height: 100vh;
       width: 100vw;
-      background-color: #171717;
+      background-color: #090e27;
       pointer-events: none;
       opacity: 0;
       transform: translateY(-100%);
@@ -125,7 +145,7 @@
       li {
         color: #4d4d4d;
         margin: 1rem;
-        font-size: 32px;
+        font-size: 18px;
         opacity: 0;
         transform: translateX(150px);
 
@@ -186,6 +206,8 @@
 // 移动端
 @media (max-width: 767.98px) {
   .header {
+    padding: 1rem 2.5rem;
+
     &-nav {
       display: none;
     }

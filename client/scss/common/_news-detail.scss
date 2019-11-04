@@ -60,7 +60,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(#fff, .5);
 
     &-prev {
@@ -68,6 +68,7 @@
       align-items: center;
       padding: .5rem 0;
       cursor: pointer;
+      color: rgba(#fff, .5);
 
       &::before {
         content: "";
@@ -77,9 +78,20 @@
         background: url("../../images/arrow-left.png");
       }
 
-      &:hover::before {
-        background: url("../../images/arrow-left-active.png");
+      &:hover {
+        color: #fff;
+
+        &::before {
+          background: url("../../images/arrow-left-active.png");
+        }
       }
+    }
+
+    &-text {
+      width: 350px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &-next {
@@ -87,6 +99,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+      color: rgba(#fff, .5);
 
       &::after {
         content: "";
@@ -96,16 +109,42 @@
         background: url("../../images/arrow-right.png");
       }
 
-      &:hover::after {
-        background: url("../../images/arrow-right-active.png");
+      &:hover {
+        color: #fff;
+
+        &::after {
+          background: url("../../images/arrow-right-active.png");
+        }
+      }
+
+      .news-detail-paging-text {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .news-detail {
+    &-title {
+      width: auto;
+
+      &.sm {
+        width: auto;
       }
     }
 
-    &-text {
-      width: 350px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    &-paging {
+      flex-direction: column;
+
+      &-text {
+        width: 70%;
+      }
+    }
+
+    &-paging-next, &-paging-prev {
+      justify-content: center;
     }
   }
 }

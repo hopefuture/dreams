@@ -30,8 +30,7 @@
   }
 
   &-item-inner {
-    margin-left: 2rem;
-    margin-bottom: 2.5rem;
+    margin: 3rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -63,12 +62,43 @@
       font-size: 12px;
       line-height: 2;
     }
+
+    &-divider {
+      display: none;
+    }
   }
 }
 
 // 移动端
 @media (max-width: 767.98px) {
   .list {
+    &-header {
+      display: flex;
+      flex-direction: row;
+      color: rgba(#fff, .3);
+      font-weight: 400;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background-color: rgba(#fff, .3);
+      }
+
+      &::before {
+        margin-right: .75rem;
+      }
+
+      &::after {
+        margin-left: .75rem;
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+
     &-item {
       margin-top: 3rem;
       margin-bottom: 3rem;
@@ -79,11 +109,27 @@
     }
 
     &-item-inner {
-      margin-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      margin: 1.5rem;
 
       &-title {
         font-size: 16px;
+        justify-content: center;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &-intro {
+        margin-top: 1rem;
+      }
+
+      &-divider {
+        display: block;
+        margin: 1rem auto;
+        height: 1px;
+        width: 100px;
+        background-color: #1a3150;
       }
     }
   }

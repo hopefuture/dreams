@@ -10,7 +10,7 @@
   }
 
   &-item {
-    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   &-content {
@@ -65,7 +65,7 @@
 
     &-more {
       display: flex;
-      align-content: center;
+      align-items: center;
       margin-top: 1rem;
       padding: 1rem 0;
       font-size: 12px;
@@ -161,6 +161,35 @@
 
       .news-paging-text {
         text-align: right;
+      }
+    }
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .news {
+    &-bg {
+      background-image: url("../../images/news/top-bg-m.jpg");
+    }
+
+    &-item {
+      margin-bottom: 1.5rem;
+    }
+
+    &-content-more {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+      width: 120px;
+      height: 30px;
+      background-image: url("../../images/button-border.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &::after {
+        display: none;
       }
     }
   }
