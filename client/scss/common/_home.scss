@@ -13,7 +13,7 @@
 }
 
 .jumbotron {
-  margin: 2rem 0;
+  margin: 8rem 0 2rem;
   text-align: center;
   background-color: transparent;
 
@@ -27,5 +27,20 @@
     font-size: 26px;
     margin-top: 1.5rem;
     font-weight: 300;
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .jumbotron {
+    margin-top: 8rem;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
   }
 }

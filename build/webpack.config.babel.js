@@ -213,9 +213,8 @@ const webpackConfig = {
         use: {
           loader: 'url-loader',
           options: {
-            name: '[name].[hash:8].[ext]',
-            limit: 10240, // 10kb
-            outputPath: 'images'
+            name: '[path][name].[hash:8].[ext]',
+            limit: 10240 // 10kb
           }
         }
       }

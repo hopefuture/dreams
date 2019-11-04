@@ -32,6 +32,10 @@
   &-item-inner {
     margin: 3rem;
 
+    &:first-child {
+      margin-top: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -110,6 +114,10 @@
 
     &-item-inner {
       margin: 1.5rem;
+
+      &:first-child {
+        margin-top: 1.5rem;
+      }
 
       &-title {
         font-size: 16px;
