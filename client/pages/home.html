@@ -7,17 +7,11 @@
 
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lib/swiper.min.css">
 
   </head>
 
-  <body class="home-body">
-    <div class="canvas-mount">
-      <div id="pageLoading" class="page-loading">
-        <div class="progress-bar">
-          <div class="progress-bar_inner" style="transition: 0s; width: 0;"></div>
-        </div>
-      </div>
-    </div>
+  <body>
     <header class="header container sticky-top">
       <a href="./home.html" class="header-logo">
         <i class="header-logo-icon"></i>
@@ -51,14 +45,138 @@
         </ul>
       </div>
     </header>
-    <div class="container home-container">
+    <div class="container">
       <section class="jumbotron">
         <h1>FROM THE DREAMS  FOR THE FUTURE</h1>
         <h4>出于梦想，之于未来</h4>
       </section>
     </div>
-    <div class="footer">
-      京ICP备 637293236 &copy; 深圳市创梦乐谷科技有限公司
+    <div class="container home-container">
+      <section class="explore">Scroll to explore</section>
+      <section class="home-content">
+        <div class="home-content-title">关于我们</div>
+        <div class="home-content-paragraph">
+          <p>深圳市创梦乐谷科技有限公司，创立于2019年6月，</p>
+          <p>是深圳市创梦天地科技有限公司的控股子公司，</p>
+          <p>是中国前沿的文化产业聚合平台，</p>
+          <p>是中国开创性的文化全产业生态缔造者，</p>
+          <p>是积极履行文化产业时代重任的民族企业。</p>
+        </div>
+        <hr>
+        <div class="swiper-container mx-3" id="swiper-about">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="home-content-inner-title">中国前沿的文化产业聚合平台</div>
+              <div class="home-content-inner-intro">
+                在文化产业各环节孤立隔绝的今天，创梦乐谷不仅贯通整合了影视产业、动漫游戏产业以及文旅产业资源，而且以IP为纽带，有机地串联起各产业领域，形成了多维度、广覆盖的文化产业聚合平台，具备强大的产业聚合力与影响力。
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="home-content-inner-title">中国开创性的文化全产业生态缔造者</div>
+              <div class="home-content-inner-intro">
+                创梦乐谷旗下共有产业园、主题乐园两大类产品体系，四大类产品类型，即创梦1905、创梦次元、创梦未来以及创梦星球。其中，创梦1905与创梦次元项目涵盖从IP生产到价值延伸的全过程，层层递进，环环相扣，形成了强大的产业能级，首创了可持续发展的全产业生态。
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="home-content-inner-title">积极履行文化产业时代重任的民族企业</div>
+              <div class="home-content-inner-intro">
+                随着西方文化影响力与竞争力的日益增强，培育民族文化自信是时代赋予文化产业的重任。创梦乐谷旗下产品均以中国文化为核心，以扶持本土文化产业从业者为己任，以创造属于中国的超级IP为目标。面对时代的召唤，创梦乐谷在发展自身的同时，更是在积极履行作为中国文化企业的责任。
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="btn">更多</div>
+      </section>
+
+      <section class="home-content">
+        <div class="home-content-title">产品概览</div>
+        <div class="swiper-container" id="swiper-overview">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="img-fluid" src="../images/home/overview1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/home/overview1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/home/overview1.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="home-content-inner">
+          <div class="home-content-inner-title">创梦1905与创梦乐谷</div>
+          <div class="home-content-inner-intro">
+            创梦1905，即影视+动漫+游戏+文旅产业园，创梦乐谷，即动漫+游戏+文旅产业园，旨在突破国内传统的“单一中心制”文化产业发展模式，创立“产业链中心制”，贯通影视产业、动漫游戏产业以及文旅产业，形成多产业链聚合的产业园区。
+          </div>
+        </div>
+        <div class="btn">更多</div>
+      </section>
+
+      <section class="home-content">
+        <div class="home-content-title">新闻中心</div>
+        <div class="news-list">
+          <div class="news-list-item">
+            <img class="img-fluid" src="../images/home/news1.jpg" alt="">
+            <div class="news-list-item-text">
+              <p class="text-ellipsis">马栏山（长沙）视频文创产业园领导团队考察创梦天地深圳总部就创梦乐谷 · 长沙项目进行深入交流</p>
+              <p>2019-07-11</p>
+            </div>
+          </div>
+          <div class="news-list-item">
+            <img class="img-fluid" src="../images/home/news2.jpg" alt="">
+            <div class="news-list-item-text">
+              <p class="text-ellipsis">长沙市政府领导团队考察创梦天地深圳总部，高度重视“创梦乐谷（长沙）动漫游戏产业园项目进程</p>
+              <p>2019-07-11</p>
+            </div>
+          </div>
+        </div>
+        <div class="btn">更多</div>
+      </section>
+
+      <section class="home-content">
+        <div class="home-content-title">联系我们</div>
+        <div class="row">
+          <div class="col-md-6">
+            <img class="img-fluid" src="../images/home/address.png" alt="">
+          </div>
+          <div class="col-md-6">
+            <div class="address-panel">
+              <h3 class="address-panel-title">深圳市创梦乐谷科技有限公司</h3>
+              <dl class="address-panel-intro">
+                <dt>地址</dt>
+                <dd>深圳市南山区科苑北路科兴科学园A3单元16层</dd>
+                <dt>电话</dt>
+                <dd>+86 - 755 - 86685111</dd>
+                <dt>传真</dt>
+                <dd>+86 - 755 - 865301</dd>
+              </dl>
+              <div class="contact-qrcode mt-4">
+                <img src="../images/home/qrcode.png" alt="">
+                <div class="ml-0 ml-sm-4 mt-4 mt-sm-0">
+                  <p class="mb-2">创梦乐谷官方微信</p>
+                  <p>欢迎扫码关注我们</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
+    <footer class="footer-assist">
+      <div class="footer">
+        <span class="attention">扫码关注</span>
+        <span class="qrcode"></span>
+        京ICP备 637293236 © 深圳市创梦乐谷科技有限公司
+
+        <div class="qrcode-img">
+          <img class="img-fluid" src="../images/qrcode.png" alt="">
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

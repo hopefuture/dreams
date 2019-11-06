@@ -18,41 +18,6 @@
   }
 }
 
-.address-panel {
-  margin-top: 1.5rem;
-  margin-left: 5rem;
-
-  &-title {
-    font-size: 18px;
-  }
-
-  &-intro {
-    margin-top: 1.5rem;
-    font-size: 14px;
-    color: rgba(#fff, .3);
-
-    &::after {
-      display: block;
-      clear: both;
-      content: "";
-    }
-
-    dt {
-      float: left;
-      width: 45px;
-      font-weight: normal;
-
-      &::after {
-        content: "：";
-      }
-    }
-
-    dd {
-      margin-left: 45px;
-    }
-  }
-}
-
 // 移动端
 @media (max-width: 767.98px) {
   .contact {
