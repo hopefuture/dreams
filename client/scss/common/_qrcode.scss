@@ -38,6 +38,18 @@
   }
 }
 
+.contact-qrcode {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  color: rgba(#fff, .3);
+  font-size: 14px;
+
+  img {
+    width: 140px;
+  }
+}
+
 // 手机端
 @media (max-width: 767.98px) {
   .qrcode {
@@ -50,5 +62,14 @@
 
   .attention {
     display: none;
+  }
+
+  .contact-qrcode {
+    flex-direction: column;
+    margin-top: 2rem;
+
+    img {
+      width: 130px;
+    }
   }
 }

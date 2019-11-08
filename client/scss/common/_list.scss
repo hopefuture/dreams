@@ -81,6 +81,7 @@
       flex-direction: row;
       color: rgba(#fff, .3);
       font-weight: 400;
+      font-size: 12px;
 
       &::before,
       &::after {
@@ -105,10 +106,17 @@
 
     &-item {
       margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
 
       &:first-child {
         margin-top: 0;
+      }
+    }
+
+    &-section {
+      margin-bottom: 3rem;
+      p {
+        margin-bottom: 0;
       }
     }
 

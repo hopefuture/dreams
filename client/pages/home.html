@@ -8,10 +8,16 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="../css/lib/swiper.min.css">
-
   </head>
 
   <body>
+    <div class="animating-bg">
+      <div class="animating-loading">
+        <div class="animating-loading-logo"></div>
+      </div>
+      <div class="home-bg desktop"></div>
+      <div class="home-bg mobile"></div>
+    </div>
     <header class="header container sticky-top">
       <a href="./home.html" class="header-logo">
         <i class="header-logo-icon"></i>
@@ -45,14 +51,18 @@
         </ul>
       </div>
     </header>
-    <div class="container">
-      <section class="jumbotron">
-        <h1>FROM THE DREAMS  FOR THE FUTURE</h1>
+    <div class="home-jumbotron">
+      <section class="home-jumbotron-content">
+        <h1 class="desktop">FROM THE DREAMS,  FOR THE FUTURE</h1>
+        <h1 class="mobile">FROM THE DREAMS <br>FOR THE FUTURE</h1>
         <h4>出于梦想，之于未来</h4>
       </section>
     </div>
     <div class="container home-container">
-      <section class="explore">Scroll to explore</section>
+      <section class="explore">
+        <div class="explore-line"></div>
+        <p>SCROLL TO EXPLORE</p>
+      </section>
       <section class="home-content">
         <div class="home-content-title">关于我们</div>
         <div class="home-content-paragraph">
@@ -155,7 +165,7 @@
                 <dd>+86 - 755 - 865301</dd>
               </dl>
               <div class="contact-qrcode mt-4">
-                <img src="../images/home/qrcode.png" alt="">
+                <img class="img-fluid" src="../images/home/qrcode.png" alt="">
                 <div class="ml-0 ml-sm-4 mt-4 mt-sm-0">
                   <p class="mb-2">创梦乐谷官方微信</p>
                   <p>欢迎扫码关注我们</p>
@@ -168,7 +178,7 @@
 
     </div>
     <footer class="footer-assist">
-      <div class="footer">
+      <div class="footer transparent">
         <span class="attention">扫码关注</span>
         <span class="qrcode"></span>
         京ICP备 637293236 © 深圳市创梦乐谷科技有限公司

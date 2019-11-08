@@ -8,14 +8,6 @@
   &-container {
     padding: 6rem 0 8rem;
   }
-
-  &-qrcode {
-    display: flex;
-    align-items: center;
-    margin-top: 1.5rem;
-    color: rgba(#fff, .3);
-    font-size: 14px;
-  }
 }
 
 // 移动端
@@ -27,11 +19,6 @@
 
     &-container {
       padding: 2rem 0 4rem;
-    }
-
-    &-qrcode {
-      flex-direction: column;
-      margin-top: 2rem;
     }
   }
 

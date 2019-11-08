@@ -1,8 +1,8 @@
 import { addClass, removeClass, containsClass } from '../utils/dom-class';
-import { doc } from '../utils/perfect';
+import { win, doc } from '../utils/perfect';
 
 export default function () {
-  window.addEventListener('wheel', (event) => {
+  win.addEventListener('wheel', (event) => {
     if (containsClass('body', 'header-menu-open')) {
       return;
     }

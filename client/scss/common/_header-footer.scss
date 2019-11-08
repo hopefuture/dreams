@@ -201,6 +201,10 @@
   font-size: 12px;
   color: rgba(#fff, .2);
   text-align: center;
+
+  &.transparent {
+    background: transparent;
+  }
 }
 
 // 移动端
