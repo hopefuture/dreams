@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 export default function () {
   new Swiper('#swiper-about', {
     autoplay: {
-      delay: 3000,
+      delay: 6000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
       reverseDirection: false,
@@ -24,7 +24,7 @@ export default function () {
   
   new Swiper('#swiper-overview', {
     autoplay: {
-      delay: 3000,
+      delay: 6000,
       stopOnLastSlide: false,
       disableOnInteraction: true,
       reverseDirection: false,
