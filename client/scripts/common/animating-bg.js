@@ -20,8 +20,6 @@ function _handleMousemove (event) {
   
   if (Math.abs(pageX) > 10) {
     homeBg.style.setProperty('transform', `perspective(400px) rotate3d(0, 1, 0, ${pageX / 50}deg)`);
-  } else if (Math.abs(pageY) > 10) {
-    homeBg.style.setProperty('transform', `perspective(400px) rotate3d(1, 0, 0, ${pageY / 50}deg)`);
   }
 }
 
@@ -50,5 +48,9 @@ export default function () {
     }, 4500);
   }, false);
   
-  // win.addEventListener('mousemove', _handleMousemove);
+  win.addEventListener('mousemove', _handleMousemove);
+  win.addEventListener(
+    'deviceorientation',
+    _handleMousemove
+  );
 };

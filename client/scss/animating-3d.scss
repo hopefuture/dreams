@@ -1,0 +1,199 @@
+.grid {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.line-vertical {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  border: .5px dotted #ccc;
+}
+
+.line-horizontal {
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  border: .5px dotted #ccc;
+}
+
+.grid-panel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 12px;
+  color: #666;
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  [class^="animation-debris"] {
+    position: absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .animating {
+    transition: transform 2000ms cubic-bezier(.45, 0, .27, 1);
+    transform-origin: center;
+  }
+
+  // x = -240 y = 510
+  &-debris1 {
+    background-image: url("../images/explode/1.png");
+    width: 86px;
+    height: 72px;
+  }
+
+  &-debris2 {
+    background-image: url("../images/explode/2.png");
+    width: 156px;
+    height: 189px;
+  }
+
+  &-debris3 {
+    background-image: url("../images/explode/3.png");
+    width: 74px;
+    height: 74px;
+  }
+
+  &-debris4 {
+    background-image: url("../images/explode/4.png");
+    width: 56px;
+    height: 56px;
+  }
+
+  &-debris5 {
+    background-image: url("../images/explode/5.png");
+    width: 23px;
+    height: 23px;
+  }
+
+  &-debris6 {
+    background-image: url("../images/explode/6.png");
+    width: 56px;
+    height: 85px;
+  }
+
+  &-debris7 {
+    background-image: url("../images/explode/7.png");
+    width: 49px;
+    height: 72px;
+  }
+
+  &-debris8 {
+    background-image: url("../images/explode/8.png");
+    width: 99px;
+    height: 95px;
+  }
+
+  &-debris9 {
+    background-image: url("../images/explode/9.png");
+    width: 35px;
+    height: 29px;
+  }
+
+  &-debris10 {
+    background-image: url("../images/explode/10.png");
+    width: 35px;
+    height: 52px;
+  }
+
+  &-debris11 {
+    background-image: url("../images/explode/11.png");
+    width: 285px;
+    height: 230px;
+  }
+
+  &-debris12 {
+    background-image: url("../images/explode/12.png");
+    width: 23px;
+    height: 23px;
+  }
+
+  &-debris13 {
+    background-image: url("../images/explode/13.png");
+    width: 59px;
+    height: 100px;
+  }
+
+  &-debris14 {
+    background-image: url("../images/explode/14.png");
+    width: 112px;
+    height: 118px;
+  }
+
+  &-debris15 {
+    background-image: url("../images/explode/15.png");
+    width: 46px;
+    height: 111px;
+  }
+
+  &-debris16 {
+    background-image: url("../images/explode/16.png");
+    width: 150px;
+    height: 170px;
+  }
+
+  &-debris17 {
+    background-image: url("../images/explode/17.png");
+    width: 68px;
+    height: 107px;
+  }
+
+  &-debris18 {
+    background-image: url("../images/explode/18.png");
+    width: 91px;
+    height: 91px;
+  }
+
+  &-debris19 {
+    background-image: url("../images/explode/19.png");
+    width: 322px;
+    height: 199px;
+  }
+
+  &-debris20 {
+    background-image: url("../images/explode/20.png");
+    width: 23px;
+    height: 23px;
+  }
+
+  &-debris21 {
+    background-image: url("../images/explode/21.png");
+    width: 55px;
+    height: 56px;
+  }
+
+  &-debris22 {
+    background-image: url("../images/explode/22.png");
+    width: 106px;
+    height: 69px;
+  }
+
+  &-debris23 {
+    background-image: url("../images/explode/23.png");
+    width: 93px;
+    height: 127px;
+  }
+}

@@ -55,6 +55,7 @@ const webpackConfig = {
    * 所以根据实际需要是否引入 babel-polyfill
    */
   entry: {
+    'animating-3d': ['./client/scripts/animating-3d/index.js'],
     animating: ['./client/scripts/animating/index.js'],
     home: ['./client/scripts/home/index.js'],
     about: ['./client/scripts/about/index.js'],
@@ -278,6 +279,7 @@ const { entry } = webpackConfig;
 
 // html
 const htmlMap = {
+  'animating-3d': 'client/pages/animating-3d.html',
   animating: 'client/pages/animating.html',
   home: 'client/pages/home.html',
   about: 'client/pages/about.html',
