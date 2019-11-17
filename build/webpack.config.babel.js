@@ -60,6 +60,10 @@ const webpackConfig = {
     home: ['./client/scripts/home/index.js'],
     about: ['./client/scripts/about/index.js'],
     overview: ['./client/scripts/overview/index.js'],
+    'overview-detail1': ['./client/scripts/overview-detail1/index.js'],
+    'overview-detail2': ['./client/scripts/overview-detail2/index.js'],
+    'overview-detail3': ['./client/scripts/overview-detail3/index.js'],
+    'overview-detail4': ['./client/scripts/overview-detail4/index.js'],
     news: ['./client/scripts/news/index.js'],
     contact: ['./client/scripts/contact/index.js'],
     'news-detail1': ['./client/scripts/news-detail/index1.js'],
@@ -277,23 +281,10 @@ const webpackConfig = {
 
 const { entry } = webpackConfig;
 
-// html
-const htmlMap = {
-  'animating-3d': 'client/pages/animating-3d.html',
-  animating: 'client/pages/animating.html',
-  home: 'client/pages/home.html',
-  about: 'client/pages/about.html',
-  overview: 'client/pages/overview.html',
-  news: 'client/pages/news.html',
-  contact: 'client/pages/contact.html',
-  'news-detail1': 'client/pages/news-detail1.html',
-  'news-detail2': 'client/pages/news-detail2.html'
-};
-
 Object.keys(entry).forEach((item) => {
   webpackConfig.plugins.push(new HtmlWebpackPlugin({
     filename: `pages/${item}.html`,
-    template: htmlMap[item],
+    template: `client/pages/${item}.html`,
     chunks: [item] // 指定要引入的 chunk
   }));
 });

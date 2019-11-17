@@ -1,15 +1,37 @@
 .dream-card {
+  display: block;
   margin-top: 2.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #1a3150;
+  color: #fff;
+
+  &:hover,
+  &:visited {
+    color: #fff;
+  }
 
   &-title {
     font-size: 16px;
     margin-top: 1.5rem;
     letter-spacing: 2px;
+
+    &.sm {
+      font-size: 14px;
+    }
   }
 
   &-subtitle {
     font-size: 14px;
+
+    &.sm {
+      font-size: 12px;
+    }
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .dream-card {
+    margin-top: 1.5rem;
   }
 }

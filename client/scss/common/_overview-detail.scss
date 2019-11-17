@@ -1,0 +1,58 @@
+.overview-detail {
+  padding: 2rem 0;
+  border-top: 1px solid #1a3150;
+
+  &-paragraph {
+    color: rgba(#fff, .5);
+    font-size: 14px;
+  }
+}
+
+.dreams-jumbotron {
+  background-repeat: no-repeat;
+
+  &.bg1 {
+    background-image: url("../../images/overview-detail/top-bg1.jpg");
+  }
+
+  &.bg2 {
+    background-image: url("../../images/overview-detail/top-bg2.jpg");
+  }
+
+  &.bg3 {
+    background-image: url("../../images/overview-detail/top-bg3.jpg");
+  }
+
+  &.bg4 {
+    background-image: url("../../images/overview-detail/top-bg4.jpg");
+  }
+}
+
+// PC 端
+@media (min-width: 992px) {
+  .dreams-jumbotron {
+    &.bg1,
+    &.bg2,
+    &.bg3,
+    &.bg4 {
+      width: auto;
+      height: 500px;
+    }
+  }
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  .overview-detail {
+    padding: 1.5rem 1rem;
+  }
+
+  .dreams-jumbotron {
+    &.bg1,
+    &.bg2,
+    &.bg3,
+    &.bg4 {
+      background-size: contain;
+    }
+  }
+}
