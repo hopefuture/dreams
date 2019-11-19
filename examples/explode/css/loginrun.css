@@ -1,0 +1,374 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.animating {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #090e27;
+  position: relative;
+}
+
+.animating .animating-logo {
+  width: 522PX;
+  height: 508PX;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -261px;
+  margin-top: -254px;
+  opacity: 0;
+}
+
+.animating .animating-logo img {
+  position: absolute;
+}
+
+.animating .animating-logo .ins_01 {
+  right: 230px;
+  top: 154px;
+  width: 39px;
+}
+
+.animating .animating-logo .ins_02 {
+  left: 198px;
+  top: 188px;
+  width: 55px;
+}
+
+.animating .animating-logo .ins_03 {
+  right: 176px;
+  top: 181px;
+  width: 82px;
+}
+
+.animating .animating-logo .ins_04 {
+  left: 228px;
+  bottom: 211px;
+  width: 82px;
+}
+
+.animating .animating-logo .ins_05 {
+  left: 180px;
+  bottom: 210px;
+  width: 32px;
+}
+
+.animating .animating-explode {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.animating .animating-explode img {
+  position: absolute;
+  transform: scale(0.2);
+}
+
+.animating .animating-explode .out_b1 img {
+  right: -100px;
+  bottom: -100px;
+}
+
+.animating .animating-explode .out_b1 .out_14 {
+  bottom: auto;
+  top: 300px;
+}
+
+.animating .animating-explode .out_b2 img {
+  left: -100px;
+  bottom: -100px;
+}
+
+.animating .animating-explode .out_b2 .out_04 {
+  left: -60px;
+  bottom: auto;
+  top: 340px;
+}
+
+.animating .animating-explode .out_b2 .out_26 {
+  left: auto;
+  right: 0;
+}
+
+.animating .animating-explode .out_b3 img {
+  right: -100px;
+  top: -100px;
+}
+
+.animating .animating-explode .out_b3 .out_17 {
+  right: auto;
+  left: 500px;
+}
+
+.animating .animating-explode .out_b4 img {
+  left: -100px;
+  top: -100px;
+}
+
+.animating .animating-explode .out_b4 .out_05 {
+  left: 120px;
+  top: -320px;
+}
+
+.animating .animating-explode .out_b4 .out_13 {
+  top: auto;
+  bottom: 440px;
+  left: 0;
+}
+
+.animating .animating-explode .out_21 {
+  left: 50%;
+  top: 50%;
+  margin-top: -66.5px;
+  margin-left: -598.5px;
+  opacity: 0;
+}
+
+.animating .animating-explode > p {
+  width: 50%;
+  height: 50%;
+  float: left;
+  position: relative;
+}
+
+.animating.effect .animating-logo {
+  opacity: 1;
+  transition: opacity .8s .1s ease-in;
+  animation: animating-logo 2.6S .1S linear forwards;
+}
+
+.animating.effect .animating-logo img {
+  transition: all .8s 2.4s ease-in-out;
+}
+
+.animating.effect .animating-logo .ins_01 {
+  right: 38px;
+  top: 0;
+  width: 71px;
+}
+
+.animating.effect .animating-logo .ins_02 {
+  left: 0px;
+  top: 36px;
+  width: 96px;
+}
+
+.animating.effect .animating-logo .ins_03 {
+  right: 0px;
+  top: 237px;
+  width: 148px;
+}
+
+.animating.effect .animating-logo .ins_04 {
+  left: 167px;
+  bottom: 0;
+  width: 147px;
+}
+
+.animating.effect .animating-logo .ins_05 {
+  left: 10px;
+  bottom: 87px;
+  width: 57px;
+}
+
+.animating.effect .animating-explode {
+  opacity: 1;
+  transition: opacity .4s 2.6s ease-in;
+}
+
+.animating.effect .animating-explode .out_21 {
+  opacity: 1;
+  transform: scale(1);
+  transition: all .8s 3s ease-in;
+}
+
+.animating.effect .animating-explode > p img {
+  transform: scale(1);
+}
+
+.animating.effect .animating-explode > p img:nth-child(1) {
+  transition: all 0.3s 2.8s cubic-bezier(0.6, 1.95, 0.57, -0.83);
+}
+
+.animating.effect .animating-explode > p img:nth-child(2) {
+  transition: all 0.4s 2.8s cubic-bezier(0, 1.48, 0.72, -1.65);
+}
+
+.animating.effect .animating-explode > p img:nth-child(3) {
+  transition: all 0.5s 2.8s cubic-bezier(0, 1.48, 1, 0.17);
+}
+
+.animating.effect .animating-explode > p img:nth-child(4) {
+  transition: all 0.4s 2.8s cubic-bezier(0.19, 1.32, 0, 0.36);
+}
+
+.animating.effect .animating-explode > p img:nth-child(5) {
+  transition: all 0.3s 2.8s cubic-bezier(0, 1.59, 0.06, 1.51);
+}
+
+.animating.effect .animating-explode > p img:nth-child(6) {
+  transition: all 0.4s 2.8s cubic-bezier(0, 1.57, 1, -1.39);
+}
+
+.animating.effect .animating-explode > p .out_01 {
+  left: 485px;
+  bottom: -40px;
+}
+
+.animating.effect .animating-explode > p .out_02 {
+  right: 390px;
+  bottom: 110px;
+}
+
+.animating.effect .animating-explode > p .out_03 {
+  top: 260px;
+  right: 550px;
+}
+
+.animating.effect .animating-explode > p .out_04 {
+  left: -60px;
+  top: -180px;
+}
+
+.animating.effect .animating-explode > p .out_05 {
+  left: -320px;
+  top: 200px;
+}
+
+.animating.effect .animating-explode > p .out_06 {
+  left: 250px;
+  top: 240px;
+}
+
+.animating.effect .animating-explode > p .out_07 {
+  right: 400px;
+  bottom: 230px;
+}
+
+.animating.effect .animating-explode > p .out_08 {
+  left: 765px;
+  bottom: 44px;
+}
+
+.animating.effect .animating-explode > p .out_09 {
+  right: 555px;
+  bottom: 196px;
+}
+
+.animating.effect .animating-explode > p .out_10 {
+  left: 590px;
+  bottom: 260px;
+}
+
+.animating.effect .animating-explode > p .out_11 {
+  top: 190px;
+  right: 300px;
+}
+
+.animating.effect .animating-explode > p .out_13 {
+  left: 140px;
+  bottom: -40px;
+}
+
+.animating.effect .animating-explode > p .out_14 {
+  right: 190px;
+  top: -20px;
+}
+
+.animating.effect .animating-explode > p .out_15 {
+  top: 30px;
+  right: 670px;
+}
+
+.animating.effect .animating-explode > p .out_16 {
+  left: 310px;
+  top: 305px;
+}
+
+.animating.effect .animating-explode > p .out_17 {
+  top: 180px;
+  left: -80px;
+}
+
+.animating.effect .animating-explode > p .out_18 {
+  left: -70px;
+  top: 136px;
+}
+
+.animating.effect .animating-explode > p .out_19 {
+  top: 170px;
+  right: 470px;
+}
+
+.animating.effect .animating-explode > p .out_22 {
+  right: 280px;
+  bottom: 140px;
+}
+
+.animating.effect .animating-explode > p .out_23 {
+  left: 164px;
+  bottom: 66px;
+}
+
+.animating.effect .animating-explode > p .out_24 {
+  right: 30px;
+  bottom: 140px;
+}
+
+.animating.effect .animating-explode > p .out_25 {
+  left: 725px;
+  top: 220px;
+}
+
+.animating.effect .animating-explode > p .out_26 {
+  right: -80px;
+  bottom: 160px;
+  left: auto;
+}
+
+@keyframes animating-logo {
+  0% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  18% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  36% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+  54% {
+    transform: scale3d(1, 1, 1);
+  }
+  72% {
+    transform: scale3d(0.85, 0.85, 0.85);
+  }
+  99.9% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(1.2, 1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

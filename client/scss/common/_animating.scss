@@ -1,0 +1,378 @@
+.animating {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  position: absolute;
+  pointer-events: none;
+
+  &-logo {
+    width: 522px;
+    height: 508px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -261px;
+    margin-top: -254px;
+    opacity: 0;
+
+    img {
+      position: absolute;
+    }
+
+    .ins_01 {
+      right: 230px;
+      top: 154px;
+      width: 39px;
+    }
+
+    .ins_02 {
+      left: 198px;
+      top: 188px;
+      width: 55px;
+    }
+
+    .ins_03 {
+      right: 176px;
+      top: 181px;
+      width: 82px;
+    }
+
+    .ins_04 {
+      left: 228px;
+      bottom: 211px;
+      width: 82px;
+    }
+
+    .ins_05 {
+      left: 180px;
+      bottom: 210px;
+      width: 32px;
+    }
+  }
+
+  &-explode {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    img {
+      position: absolute;
+      transform: scale(.2);
+    }
+
+    .out_b1 {
+      img {
+        right: -100px;
+        bottom: -100px;
+      }
+
+      .out_14 {
+        bottom: auto;
+        top: 300px;
+      }
+    }
+
+    .out_b2 {
+      img {
+        left: -100px;
+        bottom: -100px;
+      }
+
+      .out_04 {
+        left: -60px;
+        bottom: auto;
+        top: 340px;
+      }
+
+      .out_26 {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .out_b3 {
+      img {
+        right: -100px;
+        top: -100px;
+      }
+
+      .out_17 {
+        right: auto;
+        left: 500px;
+      }
+    }
+
+    .out_b4 {
+      img {
+        left: -100px;
+        top: -100px;
+      }
+
+      .out_05 {
+        left: 120px;
+        top: -320px;
+      }
+
+      .out_13 {
+        top: auto;
+        bottom: 440px;
+        left: 0;
+      }
+    }
+
+    .out_21 {
+      left: 50%;
+      top: 50%;
+      margin-top: -66.5px;
+      margin-left: -598.5px;
+      opacity: 0;
+    }
+
+    > div {
+      width: 50%;
+      height: 50%;
+      float: left;
+      position: relative;
+    }
+  }
+
+  &.effect {
+    .animating-logo {
+      opacity: 1;
+      transition: opacity .8s .1s ease-in;
+      animation: animating-logo 2.6s .1s linear forwards;
+
+      img {
+        transition: all .8s 2.4s ease-in-out;
+      }
+
+      .ins_01 {
+        right: 38px;
+        top: 0;
+        width: 71px;
+      }
+
+      .ins_02 {
+        left: 0;
+        top: 36px;
+        width: 96px;
+      }
+
+      .ins_03 {
+        right: 0;
+        top: 237px;
+        width: 148px;
+      }
+
+      .ins_04 {
+        left: 167px;
+        bottom: 0;
+        width: 147px;
+      }
+
+      .ins_05 {
+        left: 10px;
+        bottom: 87px;
+        width: 57px;
+      }
+    }
+
+    .animating-explode {
+      opacity: 1;
+      transition: opacity .4s 2.6s ease-in;
+
+      .out_21 {
+        opacity: 1;
+        transform: scale(1);
+        transition: all .8s 3s ease-in;
+      }
+
+      > div {
+        img {
+          transform: scale(1);
+
+          @each $index,
+          $time,
+          $type in (1, .3s, cubic-bezier(.6, 1.95, .57, -.83)),
+              (2, .4s, cubic-bezier(0, 1.48, .72, -1.65)),
+              (3, .5s, cubic-bezier(0, 1.48, 1, .17)),
+              (4, .4s, cubic-bezier(.19, 1.32, 0, .36)),
+              (5, .3s, cubic-bezier(0, 1.59, .06, 1.51)),
+              (6, .4s, cubic-bezier(0, 1.57, 1, -1.39)) {
+            &:nth-child(#{$index}) {
+              transition: all #{$time} 2.8s #{$type};
+            }
+          }
+        }
+
+        .out_01 {
+          left: 485px;
+          bottom: -40px;
+        }
+
+        .out_02 {
+          right: 390px;
+          bottom: 110px;
+        }
+
+        .out_03 {
+          top: 260px;
+          right: 550px;
+        }
+
+        .out_04 {
+          left: -60px;
+          top: -180px;
+        }
+
+        .out_05 {
+          left: -320px;
+          top: 200px;
+        }
+
+        .out_06 {
+          left: 250px;
+          top: 240px;
+        }
+
+        .out_07 {
+          right: 400px;
+          bottom: 230px;
+        }
+
+        .out_08 {
+          left: 765px;
+          bottom: 44px;
+        }
+
+        .out_09 {
+          right: 555px;
+          bottom: 196px;
+        }
+
+        .out_10 {
+          left: 590px;
+          bottom: 260px;
+        }
+
+        .out_11 {
+          top: 190px;
+          right: 300px;
+        }
+
+        .out_13 {
+          left: 140px;
+          bottom: -40px;
+        }
+
+        .out_14 {
+          right: 190px;
+          top: -20px;
+        }
+
+        .out_15 {
+          top: 30px;
+          right: 670px;
+        }
+
+        .out_16 {
+          left: 310px;
+          top: 305px;
+        }
+
+        .out_17 {
+          top: 180px;
+          left: -80px;
+        }
+
+        .out_18 {
+          left: -70px;
+          top: 136px;
+        }
+
+        .out_19 {
+          top: 170px;
+          right: 470px;
+        }
+
+        .out_22 {
+          right: 280px;
+          bottom: 140px;
+        }
+
+        .out_23 {
+          left: 164px;
+          bottom: 66px;
+        }
+
+        .out_24 {
+          right: 30px;
+          bottom: 140px;
+        }
+
+        .out_25 {
+          left: 725px;
+          top: 220px;
+        }
+
+        .out_26 {
+          right: -80px;
+          bottom: 160px;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animating-logo {
+  0% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  18% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  36% {
+    transform: scale3d(.95, .95, .95);
+  }
+
+  54% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  72% {
+    transform: scale3d(.85, .85, .85);
+  }
+
+  99.9% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale3d(1.2, 1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+.home-effect {
+  .header,
+  .home-jumbotron,
+  .home-container,
+  .footer {
+    transition: opacity .6s ease-in;
+    opacity: 0;
+  }
+}
+
+.home-effect.show {
+  .header,
+  .home-jumbotron,
+  .home-container,
+  .footer {
+    opacity: 1;
+  }
+}

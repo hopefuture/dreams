@@ -17,15 +17,17 @@
   &-content {
     text-align: center;
     background-color: transparent;
+    opacity: 0;
+    transform: scale(0);
 
     h1 {
-      font-size: 42px;
+      font-size: 46px;
       letter-spacing: 4px;
       font-weight: 100;
     }
 
     h4 {
-      font-size: 26px;
+      font-size: 30px;
       margin-top: 1.5rem;
       font-weight: 300;
     }
@@ -36,6 +38,12 @@
 
     .mobile {
       display: none;
+    }
+
+    &.animating-effect {
+      opacity: 1;
+      transform: scale(1);
+      transition: all .8s ease-in;
     }
   }
 }
@@ -53,6 +61,7 @@
     &-content {
       h1 {
         font-size: 32px;
+        line-height: 1.4;
       }
 
       h4 {
