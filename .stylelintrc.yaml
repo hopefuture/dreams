@@ -10,6 +10,7 @@ ignoreFiles:
 plugins:
   - stylelint-scss
 rules:
+  max-nesting-depth: null
   # stylelint-scss 插件配置
   # @else 语句后写内容需要在新的一行中写
   scss/at-else-closing-brace-newline-after: always-last-in-chain

@@ -134,8 +134,9 @@
 
     &-paragraph {
       margin: 1.5rem 1rem 0;
-      font-size: 16px;
-      line-height: 1;
+      font-size: 15px;
+      line-height: 1.2;
+      white-space: nowrap;
 
       p {
         margin-bottom: .5rem;

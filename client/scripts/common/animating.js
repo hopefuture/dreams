@@ -3,8 +3,7 @@ import { addClass } from '../utils/dom-class';
 
 export default function () {
   win.addEventListener('DOMContentLoaded', (event) => {
-    addClass('.animating', 'effect');
-    document.querySelector('.animating').classList.add('effect');
+    addClass('.home-animating', 'effect');
     setTimeout(() => {
       addClass(doc.body, 'show');
       addClass('.home-jumbotron-content', 'animating-effect');

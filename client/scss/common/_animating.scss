@@ -1,4 +1,8 @@
-.animating {
+@mixin point($direction, $distance, $type:960) {
+  #{$direction}: calc(#{$distance} / #{$type} * 100%);
+}
+
+.home-animating {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -138,7 +142,7 @@
   }
 
   &.effect {
-    .animating-logo {
+    .home-animating-logo {
       opacity: 1;
       transition: opacity .8s .1s ease-in;
       animation: animating-logo 2.6s .1s linear forwards;
@@ -178,7 +182,7 @@
       }
     }
 
-    .animating-explode {
+    .home-animating-explode {
       opacity: 1;
       transition: opacity .4s 2.6s ease-in;
 
@@ -192,134 +196,126 @@
         img {
           transform: scale(1);
 
-          @each $index,
-          $time,
-          $type in (1, .3s, cubic-bezier(.6, 1.95, .57, -.83)),
-              (2, .4s, cubic-bezier(0, 1.48, .72, -1.65)),
-              (3, .5s, cubic-bezier(0, 1.48, 1, .17)),
-              (4, .4s, cubic-bezier(.19, 1.32, 0, .36)),
-              (5, .3s, cubic-bezier(0, 1.59, .06, 1.51)),
-              (6, .4s, cubic-bezier(0, 1.57, 1, -1.39)) {
+          @each $index, $time in (1, .4s), (2, .5s), (3, .6s), (4, .5s), (5, .4s), (6, .5s) {
             &:nth-child(#{$index}) {
-              transition: all #{$time} 2.8s #{$type};
+              transition: all #{$time} 2.8s linear;
             }
           }
         }
 
         .out_01 {
-          left: 485px;
-          bottom: -40px;
+          @include point(left, 485);
+          @include point(bottom, -40, 540);
         }
 
         .out_02 {
-          right: 390px;
-          bottom: 110px;
+          @include point(right, 390);
+          @include point(bottom, 110, 540);
         }
 
         .out_03 {
-          top: 260px;
-          right: 550px;
+          @include point(right, 550);
+          @include point(top, 260, 540);
         }
 
         .out_04 {
-          left: -60px;
-          top: -180px;
+          @include point(left, -60);
+          @include point(top, -180, 540);
         }
 
         .out_05 {
-          left: -320px;
-          top: 200px;
+          @include point(left, -320);
+          @include point(top, 200, 540);
         }
 
         .out_06 {
-          left: 250px;
-          top: 240px;
+          @include point(left, 250);
+          @include point(top, 240, 540);
         }
 
         .out_07 {
-          right: 400px;
-          bottom: 230px;
+          @include point(right, 400);
+          @include point(bottom, 230, 540);
         }
 
         .out_08 {
-          left: 765px;
-          bottom: 44px;
+          @include point(left, 765);
+          @include point(bottom, 44, 540);
         }
 
         .out_09 {
-          right: 555px;
-          bottom: 196px;
+          @include point(right, 555);
+          @include point(bottom, 196, 540);
         }
 
         .out_10 {
-          left: 590px;
-          bottom: 260px;
+          @include point(left, 590);
+          @include point(bottom, 260, 540);
         }
 
         .out_11 {
-          top: 190px;
-          right: 300px;
+          @include point(right, 300);
+          @include point(top, 190, 540);
         }
 
         .out_13 {
-          left: 140px;
-          bottom: -40px;
+          @include point(left, 140);
+          @include point(bottom, -40, 540);
         }
 
         .out_14 {
-          right: 190px;
-          top: -20px;
+          @include point(right, 190);
+          @include point(top, -20, 540);
         }
 
         .out_15 {
-          top: 30px;
-          right: 670px;
+          @include point(right, 670);
+          @include point(top, 30, 540);
         }
 
         .out_16 {
-          left: 310px;
-          top: 305px;
+          @include point(left, 310);
+          @include point(top, 305, 540);
         }
 
         .out_17 {
-          top: 180px;
-          left: -80px;
+          @include point(left, -80);
+          @include point(top, 180, 540);
         }
 
         .out_18 {
-          left: -70px;
-          top: 136px;
+          @include point(left, -70);
+          @include point(top, 136, 540);
         }
 
         .out_19 {
-          top: 170px;
-          right: 470px;
+          @include point(right, 470);
+          @include point(top, 170, 540);
         }
 
         .out_22 {
-          right: 280px;
-          bottom: 140px;
+          @include point(right, 280);
+          @include point(bottom, 140, 540);
         }
 
         .out_23 {
-          left: 164px;
-          bottom: 66px;
+          @include point(left, 164);
+          @include point(bottom, 66, 540);
         }
 
         .out_24 {
-          right: 30px;
-          bottom: 140px;
+          @include point(right, 30);
+          @include point(bottom, 140, 540);
         }
 
         .out_25 {
-          left: 725px;
-          top: 220px;
+          @include point(left, 725);
+          @include point(top, 220, 540);
         }
 
         .out_26 {
-          right: -80px;
-          bottom: 160px;
-          left: auto;
+          @include point(right, -80);
+          @include point(bottom, 160, 540);
         }
       }
     }
