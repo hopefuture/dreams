@@ -39,9 +39,18 @@
 }
 
 .dreams-container {
+  position: relative;
   width: 100%;
   padding: 3rem 0 6rem;
   background-color: #090e27;
+
+  &-gradient {
+    position: absolute;
+    width: 100%;
+    content: "";
+    background-image: linear-gradient(0deg, rgba(#090e27, .8) 0, rgba(#090e27, .1) 67%);
+    transition: all 50ms linear;
+  }
 }
 
 // 移动端
