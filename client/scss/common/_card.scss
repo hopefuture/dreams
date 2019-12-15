@@ -21,12 +21,12 @@
   }
 
   &-title {
-    font-size: 16px;
+    font-size: 26px;
     margin-top: 1.5rem;
     letter-spacing: 2px;
 
     &.sm {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
@@ -34,7 +34,7 @@
     font-size: 14px;
 
     &.sm {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
@@ -43,5 +43,9 @@
 @media (max-width: 767.98px) {
   .dream-card {
     margin-top: 1.5rem;
+
+    &-title {
+      font-size: 18px;
+    }
   }
 }

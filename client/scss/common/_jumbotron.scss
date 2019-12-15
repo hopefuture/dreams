@@ -6,7 +6,7 @@
   height: 220px;
 
   &-text1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   &-text2 {
@@ -57,5 +57,13 @@
 @media (max-width: 767.98px) {
   .dreams-container {
     padding: 3rem 0 2rem;
+  }
+
+  .dreams-jumbotron {
+    height: 155px;
+
+    &-text1 {
+      font-size: 24px;
+    }
   }
 }
