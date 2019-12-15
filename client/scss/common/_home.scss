@@ -45,6 +45,11 @@
       transform: scale(1);
       transition: all .8s ease-in;
     }
+
+    &.show {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 

@@ -125,14 +125,6 @@
       }
     }
 
-    .out_21 {
-      left: 50%;
-      top: 50%;
-      margin-top: -66.5px;
-      margin-left: -598.5px;
-      opacity: 0;
-    }
-
     > div {
       width: 50%;
       height: 50%;
@@ -141,15 +133,10 @@
     }
   }
 
-  &.effect {
+  &.effect,
+  &.show {
     .home-animating-logo {
       opacity: 1;
-      transition: opacity .8s .1s ease-in;
-      animation: animating-logo 2.6s .1s linear forwards;
-
-      img {
-        transition: all .8s 2.4s ease-in-out;
-      }
 
       .ins_01 {
         right: 38px;
@@ -184,23 +171,10 @@
 
     .home-animating-explode {
       opacity: 1;
-      transition: opacity .4s 2.6s ease-in;
-
-      .out_21 {
-        opacity: 1;
-        transform: scale(1);
-        transition: all .8s 3s ease-in;
-      }
 
       > div {
         img {
           transform: scale(1);
-
-          @each $index, $time in (1, .4s), (2, .5s), (3, .6s), (4, .5s), (5, .4s), (6, .5s) {
-            &:nth-child(#{$index}) {
-              transition: all #{$time} 2.8s linear;
-            }
-          }
         }
 
         .out_01 {
@@ -316,6 +290,37 @@
         .out_26 {
           @include point(right, -80);
           @include point(bottom, 160, 540);
+        }
+      }
+    }
+  }
+
+  &.show {
+    .home-animating-logo {
+      display: none;
+    }
+  }
+
+  &.effect {
+    .home-animating-logo {
+      transition: opacity .8s .1s ease-in;
+      animation: animating-logo 2.6s .1s linear forwards;
+
+      img {
+        transition: all .8s 2.4s ease-in-out;
+      }
+    }
+
+    .home-animating-explode {
+      transition: opacity .4s 2.6s ease-in;
+
+      > div {
+        img {
+          @each $index, $time in (1, .4s), (2, .5s), (3, .6s), (4, .5s), (5, .4s), (6, .5s) {
+            &:nth-child(#{$index}) {
+              transition: all #{$time} 2.8s linear;
+            }
+          }
         }
       }
     }
